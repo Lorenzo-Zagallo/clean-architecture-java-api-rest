@@ -30,7 +30,7 @@ public class GlobalExceptionHandler {
         logger.warn("Erro de domínio: {}", handleError.getMessage());
 
         ApiError apiError = new ApiError(
-                HttpStatus.BAD_REQUEST.value(),
+                HttpStatus.UNPROCESSABLE_ENTITY.value(),
                 "Erro de validação nos campos.",
                 LocalDateTime.now(),
                 null
@@ -53,7 +53,7 @@ public class GlobalExceptionHandler {
         logger.warn("Erro de validação: {}", errors);
 
         ApiError apiError = new ApiError(
-                HttpStatus.BAD_REQUEST.value(),
+                HttpStatus.UNPROCESSABLE_ENTITY.value(),
                 "Erro de validação nos campos.",
                 LocalDateTime.now(),
                 errors

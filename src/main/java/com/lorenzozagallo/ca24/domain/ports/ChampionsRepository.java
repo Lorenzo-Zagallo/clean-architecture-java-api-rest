@@ -10,10 +10,7 @@ import java.util.Optional;
 
 public interface ChampionsRepository {
 
-    // método para buscar todos os campeões no banco de dados
     List<Champion> findAll();
 
-    /* método para buscar um campeão pelo ID (pode retornar
-     um Optional vazio se não encontrar) */
     Optional<Champion> findById(Long id);
 }
